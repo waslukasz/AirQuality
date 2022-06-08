@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja"
         mc:Ignorable="d"
-        Title="AirQuality" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="AirQuality" Height="450" Width="800" ResizeMode="CanMinimize" Icon="/contamination.png">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="381*"/>
+            <ColumnDefinition Width="400*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -53,7 +54,7 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Column="1" Grid.Row="0">
+        <Grid Grid.Column="2" Grid.Row="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="2*"/>
@@ -70,7 +71,7 @@
             <Button Grid.Column="1" Grid.Row="2" FontSize="15" FontWeight="DemiBold" Height="30" Width="150" Margin="10" Click="DeleteMeasurment">Usuń pomiar</Button>
         </Grid>
 
-        <Grid Grid.Column="0" Grid.Row="1">
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Margin="0,217,0,0" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -79,7 +80,7 @@
             <ComboBox x:Name="Selection" Grid.Row="1" FontSize="15" Margin="25 0" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             <Button x:Name="DownloadDataButton" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Pobierz dane" Click="DownloadData" />
         </Grid>
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Column="2" Margin="0,217,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="13*"/>
                 <ColumnDefinition Width="87*"/>
